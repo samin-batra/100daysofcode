@@ -44,12 +44,16 @@ while game_is_on:
         score.increase_score()
         snake.extend_snake()
     if snake.snake[0].xcor()>290 or snake.snake[0].xcor()<-290 or snake.snake[0].ycor()>290 or snake.snake[0].ycor()<-290:
-        score.game_over()
-        game_is_on = False
+        score.reset_score()
+        snake.reset_snake()
+        # score.game_over()
+        # game_is_on = False
 
     for segment in snake.snake[1:]:
         if snake.snake[0].distance(segment) < 10:
-            game_is_on = False
+            score.reset_score()
+            snake.reset_snake()
+            # game_is_on = False
 
 # print(f"{snake[0].xcor()}, {snake[1].xcor()}, {snake[2].xcor()}")
 

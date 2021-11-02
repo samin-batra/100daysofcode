@@ -10,6 +10,10 @@ RIGHT = 0
 class Snake:
     def __init__(self):
         self.snake = []
+        self.create_snake()
+
+
+    def create_snake(self):
         for i in STARTING_POSITIONS:
             self.add_segment(i)
 
@@ -45,3 +49,9 @@ class Snake:
 
     def extend_snake(self):
         self.add_segment(self.snake[-1].position())
+
+    def reset_snake(self):
+        for segs in self.snake:
+            segs.goto(1000,1000)
+        self.snake.clear()
+        self.create_snake()
