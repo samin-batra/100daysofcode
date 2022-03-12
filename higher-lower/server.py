@@ -19,6 +19,8 @@ def ans_decorator(func):
 
 @app.route("/")
 def home_route():
+    global correct_ans
+    correct_ans = random.choice([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
     return "<h1>Guess a number between 0 and 9</h1>" \
            "<img src='https://media.giphy.com/media/xxR9sQMGW23EoLsThu/giphy.gif' width=200 height=200></img>"
@@ -27,8 +29,6 @@ def home_route():
 @app.route("/checkAnswer/<number>")
 @ans_decorator
 def check_ans(number: int):
-    global correct_ans
-    correct_ans = random.choice([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
     if number==correct_ans:
         return "You found me!"
     elif number<correct_ans:
