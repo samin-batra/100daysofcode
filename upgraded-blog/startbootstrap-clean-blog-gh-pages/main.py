@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request
 from post import Post
 
@@ -29,16 +30,6 @@ def contact():
         return render_template("contact.html", response="Contact Me!", msg_sent=True)
 
 
-@app.route("/form-entry", methods=["POST"])
-def form_entry():
-    if request.method=="POST":
-        print("Req received")
-        print(request.form)
-        print(request.form['name'])
-        print(request.form['email'])
-        print(request.form['phone'])
-        return "<h1>Successfully sent your message!</h1>"
-
 @app.route("/posts/<index>")
 def get_posts(index):
     b = p.get_blog_post(int(index))
@@ -46,6 +37,7 @@ def get_posts(index):
     if b is not None:
         return render_template("post.html", post=b)
     return render_template("post.html", post={"title": "", "body": ""})
+
 
 if __name__=='__main__':
     app.run(debug=True)
