@@ -1,10 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cafe&Wifi API</title>
-</head>
-<body>
-    <h1>Welcome to the Cafe & Wifi API</h1>
-</body>
-</html>
+            {% include "header.html" %}
+
+            <div class="container" style="padding-top:4%; padding-bottom:4%;">
+                <div class="row">
+
+                {% for cafe in cafes %}
+                    <div class="col-lg-12 col-md-12">
+                        <div class="row cafe-row">
+                            <div class="col-lg-6 col-xs-12" style="text-align:center">
+                                <img src="{{cafe.img_url}}" class="cafe-img">
+
+                            </div>
+                            <div class="col-lg-6 col-xs-12 cafe-info">
+                                <div class="container-fluid cafe-data">
+                                    <h5 class="text-center cafe-names">{{cafe.name}}, {{cafe.location}}
+<!--                                        <a href="{{cafe.map_url}}" target="_blank"><i class="fa-solid fa-location-arrow"></i></a>-->
+
+                                    </h5>
+                                    <div class="container-fluid">
+                                        <div class="row">
+<!--                                        <div class="col-6">-->
+<!--                                            <p class="text-center"><strong>Location:</strong> {{cafe.location}}</p>-->
+<!--                                        </div>-->
+                                            <div class="col-12">
+                                                <p class="text-center">{{cafe.seats}} <i class="fa-solid fa-chair"></i></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <p class="text-center">
+                                                    {% if cafe.has_toilet==True %}
+                                                    <p class="text-center"><i class="fa-solid fa-toilet"></i></p>
+                                                    {% else %}
+                                                    <p class="text-center">No Toilet</p>
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        <div class="col-3">
+                                            <p class="text-center">
+<!--                                                <strong>Wifi:</strong>-->
+                                                {% if cafe.has_wifi==True %}
+                                                <p class="text-center"><i class="fa-solid fa-wifi"></i></p>
+
+                                                {% else %}
+                                                <p class="text-center">No-wifi</p>
+                                                {% endif %}
+                                            </p>
+                                        </div>
+                                        <div class="col-3">
+                                            <p class="text-center">
+                                                {% if cafe.has_sockets==True %}
+                                                <p class="text-center"><i class="fa-solid fa-plug"></i></p>
+                                                {% else %}
+                                                <p class="text-center"><i class="fa-solid fa-plug-circle-xmark"></i></p>
+                                                {% endif %}
+                                            </p>
+                                        </div>
+                                        <div class="col-3">
+                                            <p class="text-center">
+                                                {% if cafe.can_take_calls==True %}
+                                                <p class="text-center"><i class="fa-solid fa-phone"></i></p>
+                                                {% else %}
+                                                <p class="text-center"><i class="fa-solid fa-phone-slash"></i></p>
+                                                {% endif %}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 cafe-price">
+                                           <p class="text-center">
+                                                <strong>Price of 1 Cup Coffee:</strong>
+                                                {{cafe.coffee_price}}
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="{{cafe.map_url}}" target="_blank"><p class="text-center">Directions</p></a>
+
+                                        </div>
+                                    </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+
+
+       {% include "footer.html" %}

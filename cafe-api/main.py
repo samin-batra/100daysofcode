@@ -4,7 +4,6 @@ from flask import Flask, jsonify, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import random
 
-
 app = Flask(__name__)
 
 ##Connect to Database
@@ -33,7 +32,11 @@ class Cafe(db.Model):
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    cafes = db.session.query(Cafe).all()
+    cafe_list = [cafe.to_dict() for cafe in cafes]
+    print(cafe_list)
+
+    return render_template("index.html",cafes=cafe_list)
 
 
 @app.route("/random")
@@ -64,8 +67,12 @@ def search_cafe():
     return jsonify(cafe_list)
 
 
-@app.route("/add", methods = ["POST"])
+
+
+@app.route("/add", methods = ["GET","POST"])
 def add_cafe():
+    if request.method=="GET":
+        return render_template("add.html")
     if request.method=="POST":
         print(request.form)
         try:

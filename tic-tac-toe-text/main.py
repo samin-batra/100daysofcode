@@ -5,7 +5,7 @@ game = [[-1, -1, -1],
 
 GAME_MAP = {
     0:"X",
-    1:"O"
+    1:"O    "
 }
 
 def check_result(player: int):
