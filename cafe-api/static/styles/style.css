@@ -1,0 +1,76 @@
+.cafe-img   {
+    height:18.75em;
+    width:28.125em;
+
+    display:inline-block;
+}
+
+@media (max-width:960px)    {
+    .cafe-img   {
+        width:100%;
+
+    }
+}
+
+body    {
+    background-color:
+}
+
+.row {
+    padding: 0;
+}
+
+.cafe-names {
+    /*position:relative;
+    top:-50%;
+    color:white;
+    left:5%;*/
+}
+
+.col-md-6   {
+    border: 0px solid black;
+    overflow-y: no-overflow;
+    padding: 0;
+}
+
+.cafe-row   {
+    margin:0;
+}
+
+/*
+.row    {
+    background-color: #005177;
+    color: white;
+}*/
+
+.cafe-info  {
+    border-bottom: 1px solid black;
+}
+
+
+.cafe-data  {
+    padding-top: 15%;
+}
+
+div#outer-countainer    {
+    padding:0;
+}
+
+#footer {
+    background-color:black;
+    color:white;
+    margin-bottom:0;
+    padding:5%;
+}
+
+div#form-container  {
+    padding: 5%;
+}
+
+form    {
+    padding:4%;
+}
+
+.form-group {
+    margin-bottom: 2%;
+}
