@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ff18297-6854-4605-8ef7-20d7f411432a" name="Changes" comment="Cafe finder and other, older projects." />
+    <list default="true" id="0ff18297-6854-4605-8ef7-20d7f411432a" name="Changes" comment="Cafe finder and other, older projects.">
+      <change afterPath="$PROJECT_DIR$/../Starting+Files+-+flask-auth-start/.idea/Starting+Files+-+flask-auth-start.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bootstrap-day58/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/coffee-wifi-project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-portfolio/.idea/my-portfolio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-portfolio/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-portfolio/static/styles/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-portfolio/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../text-to-morsecode/.idea/text-to-morsecode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../text-to-morsecode/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful-blog-start/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Restful-blog-start/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +34,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Starting+Files+-+library-start" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">

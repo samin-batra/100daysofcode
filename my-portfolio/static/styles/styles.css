@@ -1,0 +1,71 @@
+body    {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden
+    /*font-weight: 400;*/
+}
+
+.container-fluid    {
+    padding: 0px;
+    background-color: #C7C7C7;
+}
+
+nav a {
+    color:white;
+}
+
+#social-icons   {
+    margin:auto;
+}
+
+.profile-content    {
+    /*height:90%;*/
+    background-color: #C7C7C7;
+    /*opacity:0.5;*/
+}
+
+#bio    {
+    padding: 5%;
+     font-family: 'Montserrat', sans-serif;
+    font-weight:500;
+}
+
+
+#images-vector  {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    min-height:70%;
+}
+
+#f175  {
+    transform: rotate(1deg);
+    padding:0;
+}
+
+#images-vector img  {
+    padding:0;
+}
+
+
+.vec-img    {
+    box-shadow: 5px 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

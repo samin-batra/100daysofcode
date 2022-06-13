@@ -28,6 +28,11 @@ class MovieEditForm(FlaskForm):
     review = StringField('Review', [validators.DataRequired()])
     submit = SubmitField('Submit')
 
+
+class MovieAddForm(FlaskForm):
+    title = StringField('Movie Title', [validators.DataRequired()])
+    submit = SubmitField("Add Movie")
+
 db.create_all()
 
 movie = Movie(title="Rush",year = 2013, description = "This movie is about the rivalry between James Hunt and Niki Lauda and revolves around the 1976 F1 World Championship.", rating = 5, ranking = 100, review = "Great movie!", img_url = "")
@@ -60,6 +65,13 @@ def delete(id):
     db.session.delete(movie_delete)
     db.session.commit()
     return redirect("/")
+
+
+@app.route('/add', methods = ["GET","POST"])
+def add():
+    form = MovieAddForm()
+    return render_template("add.html", form = form)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
