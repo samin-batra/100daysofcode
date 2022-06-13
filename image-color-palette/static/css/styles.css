@@ -1,0 +1,9 @@
+.color-div  {
+    height:100px;
+    width:100px;
+}
+
+div#colors  {
+    padding:6%;
+    text-align:center;
+}
